@@ -36,17 +36,58 @@ $(document).ready(function() {
 		}
 	})
 
-	$(window).scroll(function() {    
-	    var scroll = $(window).scrollTop();
+	let scrolling = false;
+	function goToByScroll(selector) {
+	    // Remove "link" from the ID
+	    // Scroll
+	    scrolling = true;
+	    $('html,body').animate({
+	        scrollTop: $(selector).offset().top - 150
+	    }, {
+	    	duration: 500,
+	    	complete() {
+	    		scrolling = false;
+	    	}
+	    });
+	}
 
-	     //>=, not <=
-	    if (scroll >= 200) {
+	$('.scroll-to-div').click(function(e) {
+		e.preventDefault();
+		let id = $(this).attr('href');
+		$('html,body').animate({
+	        scrollTop: $(id).offset().top - 150
+	    }, {
+	    	duration: 500,
+	    });
+	})
+
+	$('.goto').click(function(e) {
+		e.preventDefault();
+		let id = e.target.getAttribute('href');
+		goToByScroll(id);
+		$('.goto').removeClass('active');
+		$(`.goto[href="${id}"]`).addClass('active');
+
+	});
+	$(window).scroll(function() {
+		let currentScrollTop = $(document).scrollTop() + 150;
+		if (currentScrollTop >= 200 + 150) {
 	        //clearHeader, not clearheader - caps H
 	        $(".site-header").addClass("scroll-down");
 	    } else {
 	    	$(".site-header").removeClass("scroll-down");
 	    }
-	});
+		$('.scroll-top-section').each(function() {
+			let $this = $(this);
+			let scrollTop = $this.offset().top;
+			let scrollTopBottom = scrollTop + $this.outerHeight();
+			let id = $this.attr('id');
+			if(scrollTop < currentScrollTop && scrollTopBottom > currentScrollTop && !scrolling) {
+				$('.goto').removeClass('active');
+				$(`.goto[href="#${id}"]`).addClass('active');
+			}
+		})
+	})
 	$(window).scroll();
 
 })

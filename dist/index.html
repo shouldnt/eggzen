@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <title>eggzen</title>
     <link rel="stylesheet" href="fonts/Maven-Pro/stylesheet.css">
 
@@ -29,34 +32,42 @@
 
 <body >
     
-    <header class="site-header wow fadeInDownSmall">
-        <div class="container">
+    <header class="site-header ">
+        <div class="container wow fadeInDownSmall">
             <div class="position-relative d-flex align-items-center justify-content-between">
-                <div class="logo">
-                    <a href="#"><img src="images/logo.svg" alt=""></a>
-                </div>     
+                     
                 <div class="d-flex align-items-center">
-                    <a href="#" class="btn btn-outline-white rounded-8 px-4">Register</a>
+                    <div class="ham d-block d-lg-none mr-3 mobile-toggle" data-toggle="collapse" data-target="#menu">
+                        <div></div>
+                    </div>
+                    <a href="#" class="btn btn-red rounded-8 px-4">Register</a>
                     <a href="#" class="btn btn-white btn-square rounded-circle d-flex align-items-center justify-content-center px-0 ml-3">
                         <img src="images/icons/shopping.svg" alt="">
                     </a>
 
-                    <div class="ham d-block d-lg-none ml-3 mobile-toggle" data-toggle="collapse" data-target="#menu">
-                        <div></div>
-                    </div>
+                    
                 </div>
 
+                <div class="header-nav d-none d-lg-block" id="menu">
+                    <ul class="d-flex align-items-center">
+                        <li><a href="#intro" class="goto">Giới thiệu</a></li>
+                        <li><a href="#farm" class="goto">Các nông trại</a></li>
+                        <li><a href="#subscribe" class="goto">Đăng ký nông trại</a></li>
+                        <li><a href="#app" class="goto">Tải ứng dụng</a></li>
+                    </ul>
+                </div>
+
+                <div class="logo">
+                    <a href="#">
+                        <!-- <img src="images/logo.svg" alt=""> -->
+                        <img src="images/logo-full.svg" alt="">
+                        <img src="images/logo-icon.svg" alt="">
+                    </a>
+                </div>
                 
             </div>
         </div>
-        <div class="header-nav d-none d-lg-block" id="menu">
-            <ul class="d-flex align-items-center">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Eggs</a></li>
-                <li><a href="#">Map</a></li>
-                <li><a href="#">Submit</a></li>
-            </ul>
-        </div>
+        
 
     </header>
     <div class="mobile-menu">
@@ -64,15 +75,15 @@
             <div></div>
         </div>
         <ul class="">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Eggs</a></li>
-            <li><a href="#">Map</a></li>
-            <li><a href="#">Submit</a></li>
+            <li><a href="#intro" class="goto">Giới thiệu</a></li>
+            <li><a href="#farm" class="goto">Các nông trại</a></li>
+            <li><a href="#subscribe" class="goto">Đăng ký nông trại</a></li>
+            <li><a href="#app" class="goto">Tải ứng dụng</a></li>
         </ul>
     </div>
     
     
-    <div class="home-banner overflow-hidden position-relative">
+    <div class="home-banner overflow-hidden position-relative bg-cover scroll-top-section" style="background-image: url(images/home/banner-bg.svg)" id="intro">
         <div class="bg-pattern _1">
             <img src="images/home/bg-pattern-1.svg" alt="" class="w-100">
         </div>
@@ -86,26 +97,22 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 zindex-1">
-                        <p class="wow fadeInUpSmall">The Best eggs in town!</p>
-                        <h1 class="wow fadeInUpSmall" data-wow-delay="0.2s">We delivery eggs from the best farms.</h1>
-                        <div class="mr-lg-5 pr-lg-5 wow fadeInUpSmall"  data-wow-delay="0.4s">
+                        <p class="wow fadeInUpSmall">Món quà cho các bà mẹ!</p>
+                        <h1 class="wow fadeInUpSmall" data-wow-delay="0.2s">Chọn trứng EGGZEN <br> cả nhà <br>  đều khen</h1>
+                        <!-- <div class="mr-lg-5 pr-lg-5 wow fadeInUpSmall"  data-wow-delay="0.4s">
                             <form action="" class="d-flex rounded-primary bg-white">
                                 <input type="text" class="form-control form-control-white" placeholder="Eggs and Farms">
                                 <button class="btn btn-red-b-white px-4">Search</button>
                             </form>
-                        </div>
+                        </div> -->
                         
                     </div>
                     <div class="col-lg-6">
-                        <div class="_patterns">
-                            <div class="w-6">
+                        <div class="_patterns d-table mx-auto">
+                            <div class="w-6 ">
                                 <img src="images/home/pattern-2.svg" alt="">
                             </div>
-                            <div class="w-1">
-                                <div class="fixed-thumb _square _rounded-15 wow fadeIn"  data-wow-delay="0.6s">
-                                    
-                                </div>
-                            </div>
+                            
                             <div class="w-2">
                                 <div class="fixed-thumb _rounded-15 wow fadeInUpSmall"  data-wow-delay="0.7s">
                                     
@@ -116,13 +123,18 @@
                                     
                                 </div>
                             </div>
-                            <div class="w-4 rounded-circle overflow-hidden wow fadeIn" data-wow-delay="0.9s">
+                            <div class="w-1 wow fadeIn">
+                                <!-- <div class="fixed-thumb _square _rounded-15 wow fadeIn"  data-wow-delay="0.6s">
+                                    
+                                </div> -->
+                                <img src="images/links/keyvisual-3.png" alt="">
+                            </div>
+                            <!-- <div class="w-4 rounded-circle overflow-hidden wow fadeIn" data-wow-delay="0.9s">
                                 <div class="fixed-thumb _square rounded-circle">
                                     
                                 </div>
                                 <img src="images/icons/marker.svg" alt="">
-                            </div>
-
+                            </div> -->
                             <div class="w-5">
                                 <img src="images/home/pattern-1.svg" alt="">
                             </div>
@@ -143,7 +155,7 @@
         </div>
     </div>
 
-    <div class="popular-section">
+    <div class="popular-section position-relative scroll-top-section" id="farm">
         <div class="section_bg-pattern position-absolute w-100 h-100 top-0 left-0">
             <div class="_pattern _1">
                 <img src="images/home/egg-pattern-1.svg" alt="">
@@ -154,20 +166,21 @@
             </div>
         </div>
         <div class="container position-relative">
-            <div class="__title text-center">
+            <!-- <div class="__title text-center">
                 <div class="_badge wow fadeIn">Categories</div>
                 <h3 class="wow fadeIn" data-wow-delay="0.2s">Popular Categories</h3>
-            </div>
+            </div> -->
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-xl-3 col-md-6 col-6 wow fadeInUpSmall" data-wow-delay="0.2s">
                     <a href="#" class="popular-box">
                         <div class="_img">
+                            <img src="images/home/popular-1-hover.svg" alt="">
                             <img src="images/home/popular-1.svg" alt="">
-                            <div class="_number">27</div>
+                            <!-- <div class="_number">27</div> -->
                         </div>
                         <div class="_text">
-                            <h4>Dragon Chicken</h4>
-                            <p>$20 / Egg</p>
+                            <h4>Vườn <span>Egg<span>farm</span></span></h4>
+                            <p>Dùng vỏ trứng <br> để trồng cây</p>
                         </div>
                     </a>
                 </div>
@@ -175,44 +188,49 @@
                 <div class="col-lg-4 col-xl-3 col-md-6 col-6 wow fadeInUpSmall" data-wow-delay="0.4s">
                     <a href="#" class="popular-box">
                         <div class="_img">
-                            <img src="images/home/popular-2.svg" alt="">
-                            <div class="_number">27</div>
+                            <img src="images/home/popular-3-hover.svg" alt="">
+                            <img src="images/home/popular-3.svg" alt="">
+                            <!-- <div class="_number">27</div> -->
                         </div>
                         <div class="_text">
-                            <h4>Philipines Chicken</h4>
-                            <p>$20 / Egg</p>
+                            <h4>Nhà máy <span>Egg<span>zen</span></span></h4>
+                            <p>Cùng chiêm ngưỡng <br> nhà máy của Eggzen</p>
                         </div>
                     </a>
                 </div>
+
                 <div class="col-lg-4 col-xl-3 col-md-6 col-6 wow fadeInUpSmall" data-wow-delay="0.6s">
                     <a href="#" class="popular-box">
                         <div class="_img">
-                            <img src="images/home/popular-3.svg" alt="">
-                            <div class="_number">27</div>
+                            <img src="images/home/popular-2-hover.svg" alt="">
+                            <img src="images/home/popular-2.svg" alt="">
+                            <!-- <div class="_number">27</div> -->
                         </div>
                         <div class="_text">
-                            <h4>Tabo Chicken</h4>
-                            <p>$20 / Egg</p>
+                            <h4>Đồi rơm <span>Egg<span>view</span></span></h4>
+                            <p>Tham quan và tận hưởng <br> phong cảnh từ đồi rơm Eggview</p>
                         </div>
                     </a>
                 </div>
             </div>
 
             <div class="__title text-center">
-                <div class="_badge wow fadeIn">Categories</div>
-                <h3 class="wow fadeIn" data-wow-delay="0.2s">Farms</h3>
-                <p>Lorem ipsum dolor sit amet Lorem ipvvsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+                <div class="_badge wow fadeIn">Nông trại</div>
+                <h3 class="wow fadeIn" data-wow-delay="0.2s">Các nông trại Việt Nam</h3>
+                <p>Các nông trại được lựa chọn một cách nghiêm ngặt để chọn giống và nuôi trồng tại Eggzen</p>
             </div>
 
             <div class="swiper-container farm-swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#" class="farm-box wow fadeInUpSmall" data-wow-delay="0.2s">
+                        <a href="#" class="farm-box wow fadeInUpSmall" >
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-1.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Hoàng Hải</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -221,13 +239,15 @@
                             </div>
                         </a>
                     </div>
-                     <div class="swiper-slide">
+                    <div class="swiper-slide">
                         <a href="#" class="farm-box wow fadeInUpSmall" data-wow-delay="0.3s">
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-2.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Xuân Bình</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -236,13 +256,15 @@
                             </div>
                         </a>
                     </div>
-                     <div class="swiper-slide">
+                    <div class="swiper-slide">
                         <a href="#" class="farm-box wow fadeInUpSmall" data-wow-delay="0.4s">
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-3.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Kim Kê</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -251,13 +273,15 @@
                             </div>
                         </a>
                     </div>
-                     <div class="swiper-slide">
+                    <div class="swiper-slide">
                         <a href="#" class="farm-box wow fadeInUpSmall" data-wow-delay="0.5s">
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-4.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Gà Vườn</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -266,13 +290,15 @@
                             </div>
                         </a>
                     </div>
-                     <div class="swiper-slide">
-                        <a href="#" class="farm-box">
+                    <div class="swiper-slide">
+                        <a href="#" class="farm-box wow fadeInUpSmall" >
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-1.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Hoàng Hải</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -281,13 +307,15 @@
                             </div>
                         </a>
                     </div>
-                     <div class="swiper-slide">
-                        <a href="#" class="farm-box">
+                    <div class="swiper-slide">
+                        <a href="#" class="farm-box wow fadeInUpSmall" data-wow-delay="0.3s">
                             <div class="_img">
-                               <div class="fixed-thumb"></div> 
+                               <div class="fixed-thumb">
+                                   <img src="images/img/nong-trai-2.jpg" alt="">
+                               </div> 
                             </div>
                             <div class="_text">
-                                <p>Dragon chicken farm</p>
+                                <p>Nông trại Xuân Bình</p>
                                 <p class="_sm">Vietnam</p>
                             </div>
                             <div class="_stars">
@@ -313,22 +341,23 @@
         </div>
     </div>
 
-    <div class="map-section section">
+    <div class="map-section section scroll-top-section" id="subscribe">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="_img">
-                        <div class="w-1">
-                            <div class="fixed-thumb _square bg-red rounded-15 wow fadeIn"> </div>
-                        </div>
                         <div class="w-2">
-                            <div class="fixed-thumb _square bg-yellow-gradient rounded-15 wow fadeInDownSmall" data-wow-delay="0.1s"></div>
+                            <div class="fixed-thumb _square rounded-15 wow fadeInDownSmall" data-wow-delay="0.1s"></div>
                         </div>
                         <div class="w-3">
                             <div class="fixed-thumb _square bg-red-2 rounded-15  wow fadeInUpSmall" data-wow-delay="0.2s"></div>
                         </div>
-                        <div class="w-4">
+                        <!-- <div class="w-4">
                             <img src="images/home/map-pattern-1.svg" alt="">
+                        </div> -->
+                        <div class="w-1">
+                            <!-- <div class="fixed-thumb _square bg-red rounded-15 wow fadeIn"> </div> -->
+                            <img src="images/links/poster1.png" alt="">
                         </div>
                         <div class="w-5 wow fadeIn">
                             <img src="images/icons/marker.svg" alt="">
@@ -338,13 +367,13 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="__title">
-                        <div class="ml-0 _badge wow fadeInUpSmall">Map</div>
-                        <h3 class=" wow fadeInUpSmall" data-wow-delay="0.1s">Egg map with <br> more than 9000 <br> farms.</h3>
-                        <p class=" wow fadeInUpSmall" data-wow-delay="0.2s">Lorem ipsum dolor sit amet Lorem ipsum <br> dolor sit amet Lorem ipsum dolor sit amet.</p>
+                        <div class="ml-0 _badge wow fadeInUpSmall">Trở thành đối tác với chúng tôi</div>
+                        <h3 class=" wow fadeInUpSmall" data-wow-delay="0.1s">Hãy để EGGZEN <br> kiểm tra chất lượng <br> trứng của bạn</h3>
+                        <p class=" wow fadeInUpSmall" data-wow-delay="0.2s">Nếu bạn tự tin trứng mình đạt chuẩn chất lượng, hãy để chúng tôi <br> giúp bạn kiểm tra, và cùng nhau trở thành đối tác phân phối.</p>
                     </div>
                     <form action="" class="d-flex  wow fadeInUpSmall" data-wow-delay="0.3s">
-                        <input type="text" class="form-control form-control-white" placeholder="Eggs and Farms...">
-                        <button class="btn btn-red-b-white px-4">Search</button>
+                        <input type="text" class="form-control form-control-white" placeholder="Điền tên nông trại của bạn">
+                        <button class="btn btn-red-b-white px-4 flex-shrink-0">Đăng Ký</button>
                     </form>
                 </div>
             </div>
@@ -359,175 +388,175 @@
                 <img src="images/home/egg-pattern-3.svg" alt="">
             </div>
         </div>
-        <div class="best-deal-section">
+        <div class="best-deal-section section">
             <div class="container">
                 <div class="__title">
-                    <div class="ml-0 _badge wow fadeInUpSmall">Map</div>
-                    <h3 class=" wow fadeInUpSmall" data-wow-delay="0.1s">Best Deals</h3>
+                    <div class="ml-0 _badge wow fadeInUpSmall">Trứng eggzen</div>
+                    <h3 class=" wow fadeInUpSmall" data-wow-delay="0.1s">Các sản phẩm của chúng tôi</h3>
                     <p class=" wow fadeInUpSmall" data-wow-delay="0.2s">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall" data-wow-delay="0.3s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall" data-wow-delay="0.3s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-1.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Hoàng Hải</p>
+                                        <p>Trứng gà non</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">01 tuần giao hàng</p>
+                                            <p class="_3">20.000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall" data-wow-delay="0.4s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall" data-wow-delay="0.4s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-2.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Xuân Bình</p>
+                                        <p>Trứng gà công nghiệp</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">Giao hàng trong ngày</p>
+                                            <p class="_3">12..000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall" data-wow-delay="0.5s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall" data-wow-delay="0.5s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Xuân Bình</p>
+                                        <p>Trứng gà vân</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">01 tuần giao hàng</p>
+                                            <p class="_3">21.000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall"  data-wow-delay="0.6s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall"  data-wow-delay="0.6s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-4.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Gà Vườn</p>
+                                        <p>Trứng gà vàng</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">02 ngày giao hàng</p>
+                                            <p class="_3">22.000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall"  data-wow-delay="0.7s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall"  data-wow-delay="0.7s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-5.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Kim Kê</p>
+                                        <p>Trứng gà thả vườn</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">02 tuần giao hàng</p>
+                                            <p class="_3">32.000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6  wow fadeInUpSmall" data-wow-delay="0.8s">
+                    <div class="col-lg-6 col-md-12 col-sm-6  wow fadeInUpSmall" data-wow-delay="0.8s">
                         <a href="#" class="best-deal-box">
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="_img">
-                                         
+                                         <img src="images/img/best-deal-6.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="_text">
-                                        <p class="_1">Small Egg</p>
-                                        <p>Dragon chicken</p>
+                                        <p class="_1">Nông trại Hoàng Hải</p>
+                                        <p>Trứng gà trắng</p>
                                         <p class="_2">Vietnam</p>
                                         <div class="d-flex justify-content-between">
-                                            <p class="_3">01 week of delivery</p>
-                                            <p class="_3">$20/Egg</p>
+                                            <p class="_3">Giao hàng trong ngày</p>
+                                            <p class="_3">18.000/Vỉ</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="_stars">
+                            <!-- <div class="_stars">
                                <img src="images/icons/star.svg" alt=""> 
                                4.8
-                            </div>
+                            </div> -->
                         </a>
                     </div>
                 </div>
@@ -538,14 +567,16 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col-lg-7">
                         <div class="_img">
-                            <div class="w-1 wow fadeIn">
-                                <div class="fixed-thumb _square bg-red rounded-15" data-wow-delay="0.5s"> </div>
-                            </div>
-                            <div class="w-2">
-                                <div class="fixed-thumb _square bg-yellow-gradient rounded-15 wow fadeInUpSmall" data-wow-delay="0.6s"></div>
-                            </div>
+
                             <div class="w-3">
                                 <div class="fixed-thumb _square bg-red-2 rounded-15 wow fadeInDownSmall" data-wow-delay="0.7s"></div>
+                            </div>
+
+                            <div class="w-1 wow fadeIn">
+                                <!-- <div class="fixed-thumb _square bg-red rounded-15" data-wow-delay="0.5s"> </div> -->
+                                <img src="images/links/poster2.png" alt="">
+                            </div>                            <div class="w-2">
+                                <div class="fixed-thumb _square bg-yellow-gradient rounded-15 wow fadeInUpSmall" data-wow-delay="0.6s"></div>
                             </div>
                             <div class="w-4 wow fadeIn" data-wow-delay="0.1s">
                                 <img src="images/home/map-pattern-1.svg" alt="">
@@ -555,11 +586,11 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="__title">
-                            <div class="ml-0 _badge wow fadeInUpSmall" data-wow-delay="0.1s">become out partner</div>
-                            <h3 class=" wow fadeInUpSmall" data-wow-delay="0.2s">Egg map with <br> more than 9000 <br> farms.</h3>
+                            <div class="ml-0 _badge wow fadeInUpSmall" data-wow-delay="0.1s">Được kiểm tra định kỳ</div>
+                            <h3 class=" wow fadeInUpSmall" data-wow-delay="0.2s">Xét nghiệm và kiểm <br> tra liên tục để đảm <br> bảo trứng sạch</h3>
                             <p class=" wow fadeInUpSmall" data-wow-delay="0.3s">Lorem ipsum dolor sit amet Lorem ipsum <br> dolor sit amet Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <button class="btn btn-red-b-white px-5 font-weight-normal wow fadeInUpSmall" data-wow-delay="0.4s">submit</button>
+                        <button class="btn btn-red-b-white px-4 font-weight-normal wow fadeInUpSmall" data-wow-delay="0.4s">Đăng ký kiểm tra</button>
                         
                     </div>
                 </div>
@@ -568,24 +599,26 @@
     </div>
     
 
-    <div class="app-section section bg-yellow-gradient">
+    <div class="app-section section bg-yellow-gradient scroll-top-section" id="app">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <h3 class="mb-4 wow fadeInUpSmall" data-wow-delay="">Place order egg even easier!</h3>
-                    <div class="d-flex">
-                        <a href="#" class="btn btn-red d-flex align-items-center mr-3  wow fadeInUpSmall" data-wow-delay="0.1s">
+                    <h3 class="mb-4 wow fadeInUpSmall mb-0" data-wow-delay="">Place order egg even easier!</h3>
+                    
+                </div>
+                <div class="col-lg-6 wow fadeInRightSmall" data-wow-delay="0.3s">
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="btn btn-light-green d-flex align-items-center mr-3  wow fadeInUpSmall" data-wow-delay="0.1s">
                             <img src="images/icons/apple.svg" alt="" class="mr-2">
                             App Store
                         </a>
-                        <a href="#" class="btn btn-red d-fle align-items-center  wow fadeInUpSmall" data-wow-delay="0.2s">
+                        <a href="#" class="btn btn-light-green d-fle align-items-center  wow fadeInUpSmall" data-wow-delay="0.2s">
                             <img src="images/icons/google-play.svg" alt="" class="mr-2">
                             Google Play
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInRightSmall" data-wow-delay="0.3s">
-                    <img src="images/home/pattern-2.svg" alt="" class="mt-4">
+                    
+                    <!-- <img src="images/home/pattern-2.svg" alt="" class="mt-4"> -->
                 </div>
             </div>
 
@@ -605,20 +638,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="block-title mb-4">menu</div>
                     <div class="row _menu mb-5 mb-lg-0">
                         <div class="col-6">
-                            <a href="#">About</a>
+                            <a href="#intro" class="goto">Giới thiệu</a>
                         </div>
                         <div class="col-6">
-                            <a href="#">Map</a>
+                            <a href="#farm" class="goto">Các nông trại</a>
                         </div>
                         <div class="col-6">
-                            <a href="#">Form</a>
+                            <a href="#subscribe" class="goto">Đăng ký nông trại</a>
                         </div>
                         <div class="col-6">
-                            <a href="#">Submit</a>
+                            <a href="#app" class="goto">Tải ứng dụng</a>
                         </div>
                     </div>
                 </div>

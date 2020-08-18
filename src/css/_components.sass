@@ -35,22 +35,28 @@
 	&.btn-white
 		background: white
 		&:hover 
-			border-color: $primary-red-color
+			border-color: $primary-green-color
 	&.btn-square
 		width: 42px
 	
 	&.btn-red-b-white
 		border-color: #fff
-		background: $primary-red-color
+		background: $primary-green-color
 		color: #fff
 		&:hover 
-			background: darken($primary-red-color, 5%)
+			background: darken($primary-green-color, 5%)
 	&.btn-red 
-		background: $primary-red-color
-		border-color: $primary-red-color
+		background: $primary-green-color
+		border-color: $primary-green-color
 		color: #fff
 		&:hover 
-			background: darken($primary-red-color, 10%)
+			background: darken($primary-green-color, 10%)
+	&.btn-light-green
+		background: $light-green-color
+		border-color: $light-green-color
+		color: #fff
+		&:hover 
+			background: darken($light-green-color, 10%)
 
 .form-control 
 	height: 42px
@@ -61,6 +67,7 @@
 
 
 .__title 
+	position: relative
 	._badge 
 		color: #fff
 		display: table
@@ -70,8 +77,8 @@
 		line-height: 22px
 		font-size: 12px
 		text-transform: uppercase
-		padding: 0 10px 
-		background: $primary-red-color
+		padding: 3px 20px 
+		background: $light-green-color
 		border-radius: 20px
 		margin-bottom: 20px
 	h3 

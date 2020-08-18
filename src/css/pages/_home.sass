@@ -1,5 +1,5 @@
 .home-banner
-	background: $primary-red-color
+	// background: $primary-green-color
 	width: 100%
 	height: 100vh
 	overflow: hidden
@@ -33,11 +33,13 @@
 			font-size: 26px
 			font-weight: 600
 			margin-bottom: 30px
+			color: $primary-green-color
 		h1 
 			font-size: 69px
 			font-weight: bold
 			line-height: 1.1
 			margin-bottom: 45px
+			color: $light-green-color
 	
 	._social
 		position: absolute
@@ -50,7 +52,7 @@
 			height: 42px
 			border-radius: 50%
 			background: #fff
-			color: $primary-red-color
+			color: $primary-green-color
 			display: flex
 			align-items: center
 			justify-content: center
@@ -58,31 +60,33 @@
 
 	._patterns
 		position: relative
+		margin-top: 100px
 		.fixed-thumb 
 			&._rounded-15 
 				border-radius: 15px
 		.w-1
-			width: 332px
+			width: 520px
 			margin: 0 auto
 			position: relative
 			.fixed-thumb
-				background: $primary-red-2-color
+				background: $light-green-color
 		.w-2
 			position: absolute
-			bottom: 0
+			top: 50%
+			left: 0
 			width: 235px
-			transform: translate(-15%, 50%)
+			// transform: translate(-15%, 50%)
 			.fixed-thumb
-				background: $yellow-gradient
+				background: $primary-green-color
 				padding-bottom: 88%
 		.w-3
 			position: absolute
-			top: 0
-			right: 0
-			width: 148px
-			transform: translateY(-35%)
+			top: 10%
+			right: 10%
+			width: 108px
+			// transform: translateX(-45%)
 			.fixed-thumb
-				background: #fff
+				background: $light-green-color
 
 		.w-4 
 			position: absolute
@@ -99,35 +103,43 @@
 		.w-5	
 			position: absolute
 			bottom: 20% 
-			right: 20% 
-			transform: translateX(20%)
+			right: 00% 
+			// transform: translateX(20%)
 
 		.w-6	
 			position: absolute
-			top: 0 
-			left: 0 
-			transform: translateY(-50%)
+			top: 6% 
+			left: 10% 
 
 .popular-box 
-	background: #F1F2F2
+	background: #F7F5F5
 	border-radius: 16px
 	overflow: hidden
 	transition: all .3s ease-in-out
-	padding-top: 45px
-	padding-bottom: 35px
+	padding-bottom: 20px
 	margin-bottom: 35px
 	display: block
+	position: relative
 	._img 
-		display: table
-		margin: 0 auto
+		width: 100%
 		position: relative
-		margin-bottom: 30px
+		padding-bottom: 88.28%
+		height: 0.1px
+		overflow: hidden
 		img 
 			display: block
 			margin: 0 auto
-			width: 150px
-			filter: grayscale(1)
+			width: 52px
+			// filter: grayscale(1)
 			transition: all .3s ease-in-out
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			transition: all .3s ease-in-out
+			&:last-child 
+				opacity: 0
+
 		._number 
 			position: absolute
 			top: 0
@@ -145,22 +157,28 @@
 	._text 
 		text-align: center
 		h4 
-			font-size: 16px
+			font-size: 24px
 			color: $text-color
-			font-weight: 600
+			font-weight: bold
 			transition: all .3s ease-in-out
-			margin-bottom: 10px
+			margin-bottom: 15px
+			span 	
+				color: $light-yellow-color
+				span 
+					color: $light-green-color
 		p 
 			margin-bottom: 0
 			color: $text-color
-			font-size: 16px
+			font-size: 13px
 			font-weight: 300
 			transition: all .3s ease-in-out
 	&:hover 
-		background: $primary-red-color
+		background: $primary-green-color
 		._img 
 			img 
-				filter: none
+				opacity: 0
+				&:last-child 
+					opacity: 1
 		._text 
 			h4 
 				color: #fff
@@ -169,6 +187,7 @@
 
 .popular-section
 	padding: 65px 0
+	padding-top: 80px
 	position: relative
 	.section_bg-pattern	
 		overflow: hidden
@@ -199,9 +218,11 @@
 	background: #F1F2F2
 	display: block
 	._img 
+		img 
+			transition: all .3s ease-in-out
 		.fixed-thumb
 			padding-bottom: 77.872%
-			background: rgba($primary-red-color, .4)
+			background: rgba($primary-green-color, .4)
 	._text
 		padding: 25px 21px
 		color: $text-color
@@ -209,6 +230,7 @@
 		font-weight: 600
 		p 
 			margin-bottom: 6px
+			font-weight: bold
 		p._sm 
 			font-size: 14px
 			font-weight: normal
@@ -219,7 +241,7 @@
 		left: 15px
 		font-size: 14px
 		font-weight: 600
-		color: $primary-red-color
+		color: $primary-green-color
 		display: flex
 		align-items: center
 		padding-left: 10px
@@ -233,8 +255,10 @@
 			margin-right: 8px
 	&:hover 
 		._img 
+			img 
+				transform: scale(1.1)
 			.fixed-thumb
-				background: rgba($primary-red-color, .8)
+				background: rgba($primary-green-color, .8)
 .farm-swiper-footer
 	a 
 		font-size: 13px
@@ -244,7 +268,7 @@
 	width: 41px
 	height: 41px
 	border-radius: 30px
-	background: $primary-red-color
+	background: $light-yellow-color
 	display: flex
 	align-items: center
 	justify-content: center
@@ -274,30 +298,45 @@
 			width: 100%
 			height: 100%
 			border: 1px solid #ADAFB2
-			border-radius: 11px
+			border-radius: 5px
 	input
+		border: 1px solid #ADAFB2!important
+		border-right: 0!important
 		border-color: transparent
+		border-radius: 0
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
+		font-size: 12px
+		position: relative
 	button 
 		position: relative
-
+		border-radius: 5px
+		position: relative
 	
 	._img 
+		display: table
+		margin-left: 35px
+		margin-top: 40px
+		position: relative
 		.w-1
 			position: relative
-			width: 401px
+			width: 531px
 			margin-left: 45px
+			transform: translateX(-25%)
 		.w-2 
 			position: absolute
-			width: 122px
-			top: 0
-			left: 0
-			transform: translateY(20%)
+			width: 52px
+			top: 7%
+			left: -2% 
+			.fixed-thumb
+				background: $light-yellow-color
 		.w-3
 			position: absolute
 			width: 150px
-			bottom: 0
-			right: 0
-			transform: translate(-70%, -40%)
+			top: 40%
+			right: 20%
+			.fixed-thumb
+				background: $light-green-color
 		.w-4
 			position: absolute
 			top: 0
@@ -311,9 +350,8 @@
 			border-radius: 9px
 			background: #fff
 			position: absolute
-			bottom: 0
-			left: 30px 
-			transform: translateY(-70%)
+			bottom: 30%
+			left: -5% 
 			box-shadow: 28px 7px 56px rgba(black, .35)
 			padding: 0 20px
 			img 
@@ -331,8 +369,18 @@
 		> [class*="col-"]
 			display: flex
 	._img 
-		background: $primary-red-2-color
+		background: $light-green-color
 		width: 100%
+		position: relative
+		overflow: hidden
+		img 
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all .3s ease-in-out
 	._text 
 		width: 100%
 		padding: 14px 20px 21px 30px
@@ -341,6 +389,7 @@
 			font-size: 14px
 			font-weight: normal
 			margin-bottom: 30px
+			color: $light-green-color
 		p 
 			font-size: 18.5px
 			font-weight: 900
@@ -362,7 +411,7 @@
 		left: 15px
 		font-size: 14px
 		font-weight: 600
-		color: $primary-red-color
+		color: $primary-green-color
 		display: flex
 		align-items: center
 		padding-left: 10px
@@ -374,6 +423,11 @@
 			display: block
 			width: 19px
 			margin-right: 8px
+
+	&:hover 
+		._img 
+			img 
+				transform: scale(1.1)	
 
 .best-deal-section
 	padding-bottom: 160px
@@ -398,17 +452,21 @@
 	._img 
 		.w-2 
 			top: auto
-			bottom: 0 
-			transform: translateY(-30%)
+			bottom: 20% 
+			left: -5%
+			width: 80px
 		.w-3
 			bottom: auto
-			top: 0
-			transform: translate(-80%, 40%)
+			top: 10%
+			right: 30%
+			// transform: translate(-80%, 40%)
 		.w-4 
-			left: 0
-			top: 0
-			right: auto	
-			transform: translateY(30%)
+			top: auto
+			bottom: 20%
+			right: -3%
+	button 
+		border-radius: 11px
+
 
 .app-section
 	padding: 75px  0
@@ -419,6 +477,17 @@
 
 @media (max-width: 991.82px)
 	.home-banner 
+		height: auto
+		background: #ffefca
+		background-image: initial!important
+		._text 
+			margin-top: 150px
+			position: static
+			transform: none
+			h1 
+				font-size: 50px
+		._patterns 
+			margin-top: 0
 		.bg-pattern
 			&._1
 				width: 40%
