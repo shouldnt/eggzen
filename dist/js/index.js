@@ -9867,8 +9867,8 @@ $(document).ready(function () {
 		$('.goto[href="' + id + '"]').addClass('active');
 	});
 	$(window).scroll(function () {
-		var currentScrollTop = $(document).scrollTop() + 150;
-		if (currentScrollTop >= 200 + 150) {
+		var currentScrollTop = $(document).scrollTop() + 220;
+		if (currentScrollTop >= 200 + 220) {
 			//clearHeader, not clearheader - caps H
 			$(".site-header").addClass("scroll-down");
 		} else {
