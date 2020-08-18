@@ -1,0 +1,512 @@
+.home-banner
+	background: $primary-red-color
+	width: 100%
+	height: 100vh
+	overflow: hidden
+	.bg-pattern 
+		position: absolute
+		&._1 
+			width: 462px
+			top: 0
+			left: 0
+			transform: translate(-35%, -75%)
+
+		&._2
+			width: 462px
+			top: 0
+			right: 0
+			transform: translate(-5%, -75%)
+		&._3
+			width: 800px
+			bottom: 0
+			right: 0
+			transform: translate(-10%, 50%)
+
+	._text 
+		position: absolute
+		top: 50% 
+		left: 0
+		width: 100%
+		transform: translateY(-50%)
+		color: #fff
+		p 
+			font-size: 26px
+			font-weight: 600
+			margin-bottom: 30px
+		h1 
+			font-size: 69px
+			font-weight: bold
+			line-height: 1.1
+			margin-bottom: 45px
+	
+	._social
+		position: absolute
+		left: 0
+		bottom: 40px
+		width: 100%
+		a 
+			display: block
+			width: 42px
+			height: 42px
+			border-radius: 50%
+			background: #fff
+			color: $primary-red-color
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-right: 10px
+
+	._patterns
+		position: relative
+		.fixed-thumb 
+			&._rounded-15 
+				border-radius: 15px
+		.w-1
+			width: 332px
+			margin: 0 auto
+			position: relative
+			.fixed-thumb
+				background: $primary-red-2-color
+		.w-2
+			position: absolute
+			bottom: 0
+			width: 235px
+			transform: translate(-15%, 50%)
+			.fixed-thumb
+				background: $yellow-gradient
+				padding-bottom: 88%
+		.w-3
+			position: absolute
+			top: 0
+			right: 0
+			width: 148px
+			transform: translateY(-35%)
+			.fixed-thumb
+				background: #fff
+
+		.w-4 
+			position: absolute
+			width: 91px
+			background: #fff
+			bottom: 0
+			right: 0
+			transform: translate(-50%, 40%)
+			img 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+		.w-5	
+			position: absolute
+			bottom: 20% 
+			right: 20% 
+			transform: translateX(20%)
+
+		.w-6	
+			position: absolute
+			top: 0 
+			left: 0 
+			transform: translateY(-50%)
+
+.popular-box 
+	background: #F1F2F2
+	border-radius: 16px
+	overflow: hidden
+	transition: all .3s ease-in-out
+	padding-top: 45px
+	padding-bottom: 35px
+	margin-bottom: 35px
+	display: block
+	._img 
+		display: table
+		margin: 0 auto
+		position: relative
+		margin-bottom: 30px
+		img 
+			display: block
+			margin: 0 auto
+			width: 150px
+			filter: grayscale(1)
+			transition: all .3s ease-in-out
+		._number 
+			position: absolute
+			top: 0
+			right: 0
+			background: $yellow-gradient
+			font-size: 14px
+			color: #fff
+			width: 37px
+			height: 37px
+			border-radius: 50%
+			font-weight: bold
+			display: flex
+			align-items: center
+			justify-content: center
+	._text 
+		text-align: center
+		h4 
+			font-size: 16px
+			color: $text-color
+			font-weight: 600
+			transition: all .3s ease-in-out
+			margin-bottom: 10px
+		p 
+			margin-bottom: 0
+			color: $text-color
+			font-size: 16px
+			font-weight: 300
+			transition: all .3s ease-in-out
+	&:hover 
+		background: $primary-red-color
+		._img 
+			img 
+				filter: none
+		._text 
+			h4 
+				color: #fff
+			p 
+				color: rgba(#fff, .5)
+
+.popular-section
+	padding: 65px 0
+	position: relative
+	.section_bg-pattern	
+		overflow: hidden
+		top: 0
+		left: 0
+		._pattern
+			position: absolute
+			img 
+				width: 100%
+			&._1
+				width: 300px
+				max-width: 15%
+				top: 0
+				right: 10%
+				transform: translateY(-50%)
+			&._2 
+				left: 45%
+				bottom: 70px
+
+	.__title
+		margin-bottom: 45px
+
+
+
+.farm-box
+	border-radius: 16px
+	overflow: hidden
+	background: #F1F2F2
+	display: block
+	._img 
+		.fixed-thumb
+			padding-bottom: 77.872%
+			background: rgba($primary-red-color, .4)
+	._text
+		padding: 25px 21px
+		color: $text-color
+		font-size: 16px
+		font-weight: 600
+		p 
+			margin-bottom: 6px
+		p._sm 
+			font-size: 14px
+			font-weight: normal
+			margin-bottom: 0
+	._stars
+		position: absolute
+		top: 15px
+		left: 15px
+		font-size: 14px
+		font-weight: 600
+		color: $primary-red-color
+		display: flex
+		align-items: center
+		padding-left: 10px
+		padding-right: 15px
+		background: #fff
+		border-radius: 6px
+		height: 41px
+		img 
+			display: block
+			width: 19px
+			margin-right: 8px
+	&:hover 
+		._img 
+			.fixed-thumb
+				background: rgba($primary-red-color, .8)
+.farm-swiper-footer
+	a 
+		font-size: 13px
+		font-weight: normal
+		color: $text-color
+.farm-swiper-prev, .farm-swiper-next
+	width: 41px
+	height: 41px
+	border-radius: 30px
+	background: $primary-red-color
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	transition: all .3s ease-in-out
+	&:focus
+		outline: 0
+		user-select: none
+	&.swiper-button-disabled
+		pointer-events: none
+		opacity: 0.5
+
+.farm-swiper-prev
+	margin-right: 10px
+	img 
+		transform: scale(-1, 1)
+
+.map-section
+	padding-bottom: 120px
+	form 
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0 
+			width: 100%
+			height: 100%
+			border: 1px solid #ADAFB2
+			border-radius: 11px
+	input
+		border-color: transparent
+	button 
+		position: relative
+
+	
+	._img 
+		.w-1
+			position: relative
+			width: 401px
+			margin-left: 45px
+		.w-2 
+			position: absolute
+			width: 122px
+			top: 0
+			left: 0
+			transform: translateY(20%)
+		.w-3
+			position: absolute
+			width: 150px
+			bottom: 0
+			right: 0
+			transform: translate(-70%, -40%)
+		.w-4
+			position: absolute
+			top: 0
+			right: 0
+			transform: translate(-90%, -20%)
+		.w-5 
+			display: flex
+			align-items: center
+			height: 57px
+			padding: 15px 0
+			border-radius: 9px
+			background: #fff
+			position: absolute
+			bottom: 0
+			left: 30px 
+			transform: translateY(-70%)
+			box-shadow: 28px 7px 56px rgba(black, .35)
+			padding: 0 20px
+			img 
+				width: 20px
+				margin-right: 9px
+
+.best-deal-box 
+	position: relative
+	display: block
+	border-radius: 20px
+	overflow: hidden
+	background: #F1F2F2
+	margin-bottom: 20px
+	.row 
+		> [class*="col-"]
+			display: flex
+	._img 
+		background: $primary-red-2-color
+		width: 100%
+	._text 
+		width: 100%
+		padding: 14px 20px 21px 30px
+		color: $text-color
+		p._1
+			font-size: 14px
+			font-weight: normal
+			margin-bottom: 30px
+		p 
+			font-size: 18.5px
+			font-weight: 900
+			margin-bottom: 5px
+		p._2 
+			font-size: 14px
+			color: #A7A9AC
+			font-weight: normal
+			margin-bottom: 40px
+		p._3 
+			font-size: 11.5px
+			color: #A7A9AC
+			font-weight: normal
+			margin-bottom: 0
+
+	._stars
+		position: absolute
+		top: 15px
+		left: 15px
+		font-size: 14px
+		font-weight: 600
+		color: $primary-red-color
+		display: flex
+		align-items: center
+		padding-left: 10px
+		padding-right: 15px
+		background: #fff
+		border-radius: 6px
+		height: 41px
+		img 
+			display: block
+			width: 19px
+			margin-right: 8px
+
+.best-deal-section
+	padding-bottom: 160px
+	.__title 
+		margin-bottom: 33px
+
+.egg-pattern-section
+	overflow: hidden
+	top: 0
+	left: 0 
+	.pattern 
+		position: absolute
+		top: 40%
+		&._1
+			left: 10%
+		&._2 
+			right: 20%
+			top: 55%
+			transform: translateY(-50%)
+
+.map-section.map-section-2
+	._img 
+		.w-2 
+			top: auto
+			bottom: 0 
+			transform: translateY(-30%)
+		.w-3
+			bottom: auto
+			top: 0
+			transform: translate(-80%, 40%)
+		.w-4 
+			left: 0
+			top: 0
+			right: auto	
+			transform: translateY(30%)
+
+.app-section
+	padding: 75px  0
+	h3 
+		font-size: 46px
+		font-weight: 900
+		color: #fff
+
+@media (max-width: 991.82px)
+	.home-banner 
+		.bg-pattern
+			&._1
+				width: 40%
+			&._2 
+				width: 40%
+			&._3 
+				width: 50%
+		._patterns 
+			padding-top: 50px
+
+	.map-section
+		.__title
+			margin-top: 40px
+			h3 
+				br 
+					display: none 
+	
+	.best-deal-box
+		max-width: 450px
+		margin: 0 auto
+		margin-bottom: 20px
+@media (max-width: 767.82px)
+	.home-banner
+		padding: 90px 0
+		height: auto
+		._text 
+			position: static
+			transform: none
+			h1 
+				font-size: 40px
+		._patterns
+			margin-top: 90px
+	.map-section 
+		._img 
+			.w-1
+				max-width: 90%
+			.w-2
+				max-width: 18%
+			.w-3
+				transform: translate(0, 10%)
+				max-width: 20%
+	.best-deal-box
+		._img 
+			padding-bottom: 60%	
+
+	.map-section.map-section-2 
+		._img 
+			.w-3
+				transform: translateY(40%)
+@media (max-width: 575.82px)
+	
+	.home-banner 
+		._patterns 
+			.w-1
+				max-width: 100%
+			.w-2
+				max-width: 30%
+			.w-3
+				max-width: 25%
+	.map-section
+		padding-bottom: 40px
+	.best-deal-section
+		padding-bottom: 40px
+	.best-deal-box
+		._img 
+			padding-bottom: 80%	
+		._text 
+			p
+				&._1 
+					margin-bottom: 15px
+				&._2 
+					margin-bottom: 15px
+
+	.app-section h3
+		font-size: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

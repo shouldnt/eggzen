@@ -1,0 +1,117 @@
+@import 'components/fixedThumb'
+@import 'buttons/buttons'
+
+.x-close 
+	width: 20px
+	height: 20px
+	cursor: pointer
+	position: relative
+	&:before, &:after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		height: 1px
+		background: red
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&:after
+		transform: translate(-50%, -50%) rotate(45deg)
+
+.btn
+	border-radius: 11px
+	height: 42px
+	line-height: 40px
+	font-size: 14px
+	font-weight: bold
+	padding-top: 0
+	padding-bottom: 0
+	&.btn-outline-white
+		border-color: white
+		color: #fff
+		&:hover 
+			background: #fff
+			color: #333
+	&.btn-white
+		background: white
+		&:hover 
+			border-color: $primary-red-color
+	&.btn-square
+		width: 42px
+	
+	&.btn-red-b-white
+		border-color: #fff
+		background: $primary-red-color
+		color: #fff
+		&:hover 
+			background: darken($primary-red-color, 5%)
+	&.btn-red 
+		background: $primary-red-color
+		border-color: $primary-red-color
+		color: #fff
+		&:hover 
+			background: darken($primary-red-color, 10%)
+
+.form-control 
+	height: 42px
+	border-radius: 11px
+	&.form-control-white
+		border-color: #fff
+		background: #fff
+
+
+.__title 
+	._badge 
+		color: #fff
+		display: table
+		margin: 0 auto
+		margin-bottom: 20px
+		height: 22px
+		line-height: 22px
+		font-size: 12px
+		text-transform: uppercase
+		padding: 0 10px 
+		background: $primary-red-color
+		border-radius: 20px
+		margin-bottom: 20px
+	h3 
+		font-size: 46px
+		font-weight: bold
+		line-height: 1
+		margin-bottom: 0
+		color: #4D4D4F
+
+	p 
+		font-size: 14px
+		color: #4D4D4F
+		margin-top: 25px
+	
+	@media (max-width: 767.82px)
+		h3 
+			font-size: 40px
+	@media (max-width: 575.82px)
+		h3 
+			font-size: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
