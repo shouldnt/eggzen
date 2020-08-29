@@ -18,8 +18,9 @@ $(document).ready(function() {
 			767: {
 				slidesPerView: 2
 			},
-			420: {
-				slidesPerView: 1
+			575: {
+				slidesPerView: 2,
+				slidesPerColumn: 2
 			},
 		}
 	})

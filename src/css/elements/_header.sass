@@ -78,6 +78,7 @@
 				display: none
 				&:last-child 
 					display: block
+					max-width: 50px
 	.header-nav,
 		// position: absolute
 		// top: 50%
@@ -149,6 +150,28 @@
 		.mobile-menu
 			box-shadow: 0 3px 50px rgba(black, .5)
 			left: 0
+
+
+@media (max-width: 575.82px)
+	
+	.site-header 
+		.mobile-header
+			width: 100%
+			.ham 
+				width: 30px
+				> div 
+					background: transparent
+					width: 30px
+					&:before, &:after
+						width: 30px
+						height: 2px
+						background: #fff
+			.btn.btn-red 
+				background: $light-green-color
+				border-color: $light-green-color
+				font-size: 20px
+				height: 46px
+				line-height: 44px
 
 
 

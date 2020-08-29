@@ -501,10 +501,12 @@
 	.map-section
 		.__title
 			margin-top: 40px
+			margin-bottom: 40px
 			h3 
-				br 
-					display: none 
-	
+				text-align: center
+			p 
+				text-align: center
+
 	.best-deal-box
 		max-width: 450px
 		margin: 0 auto
@@ -540,22 +542,80 @@
 @media (max-width: 575.82px)
 	
 	.home-banner 
+		._text 
+			margin-top: 40px
+			p 
+				color: $light-yellow-color
+				white-space: nowrap
+				font-size: 16px
+				margin-bottom: 10px
+			h1
+				font-size: 34px
+				margin-bottom: 0
+				span 
+					color: #fff
 		._patterns 
+			margin-top: 0
+			padding-top: 10px
 			.w-1
-				max-width: 100%
+				max-width: 70%
+				margin: 0 auto
+				transform: translateX(-10%)
 			.w-2
 				max-width: 30%
+				left: 10%
 			.w-3
 				max-width: 25%
+				right: 33%
+				width: 80px
+			.w-5
+				right: 20%
+			.w-6
+				top: 5%
+	.popular-box
+		display: flex
+		align-items: center
+		padding-bottom: 0
+		._img 
+			width: 140px
+			padding-bottom: 0 
+			height: 220px
+		._text 
+			text-align: left
 	.map-section
 		padding-bottom: 40px
+		form 
+			max-width: 400px
+			width: 100%
+			margin-left: auto
+			margin-right: auto
+		.mobile-order-2
+			order: 1
+
+		._img 
+			.w-1
+				max-width: 72%
+				transform: translateX(-15%)
+			.w-2 
+				.fixed-thumb
+					border-radius: 50%!important
+			.w-3
+				right: 30%
 	.best-deal-section
 		padding-bottom: 40px
+		.__title
+			text-align: center
+		.container
+			padding-right: 0
+			overflow: hidden
 	.best-deal-box
 		._img 
 			padding-bottom: 80%	
 		._text 
+			padding-right: 10px
+			padding-left: 20px
 			p
+				font-size: 18px
 				&._1 
 					margin-bottom: 15px
 				&._2 
@@ -563,6 +623,7 @@
 
 	.app-section h3
 		font-size: 30px
+
 
 
 
