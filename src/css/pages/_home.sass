@@ -664,8 +664,32 @@ $a-delays: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 			.w-4 
 				right: -20%
 				transform: translateX(-50%)
+	.best-deal-section
+		.list-scroller
+			min-width: 800px
 
 
+@media (max-width: 420px)
+	.best-deal-section
+		.list-scroller > .row 
+			margin-left: -5px
+			margin-right: -5px
+			> [class*="col"]
+				padding-left: 5px
+				padding-right: 5px
+		.list-scroller
+			min-width: 650px
+	.best-deal-box 
+		margin-bottom: 10px
+		._text 
+			padding-left: 10px
+			p
+				font-size: 12px
+				&._2, &._1
+					font-size: 12px
+					margin-bottom: 5px
+				&._3
+					font-size: 11px
 
 
 
